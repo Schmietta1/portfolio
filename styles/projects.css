@@ -1,0 +1,42 @@
+/* Ensure snowflakes container fills entire viewport and is below content */
+.snowflakes {
+  position: fixed; /* Changed from absolute to fixed to cover the entire screen */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ensure full viewport width */
+  height: 100vh; /* Ensure full viewport height */
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1; /* Set to negative to be below other content */
+}
+
+/* Individual snowflake styling remains the same */
+.snowflake {
+  position: absolute;
+  top: -10px; /* Start just above the screen */
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation-name: fall;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Keyframes for falling effect */
+@keyframes fall {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(40vh);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
