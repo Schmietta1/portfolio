@@ -6,17 +6,17 @@ import Projects from "../component/Projects.js";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center">
+    <div>
       <Head>
-        <title>My Portfolio</title>
+        <title>Schmietta&apos;s portfolio</title>
         <meta
           name="description"
           content="Welcome to my personal portfolio website."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/iconFirst.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center flex-1 text-center">
+      <main>
         <Banner />
         <Projects />
         <Footer />
