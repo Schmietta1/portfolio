@@ -7,20 +7,19 @@ import Projects from "../component/Projects.js";
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Schmietta&apos;s portfolio</title>
-        <meta
-          name="description"
-          content="Welcome to my personal portfolio website."
-        />
-        <link rel="icon" href="/iconFirst.ico" />
-      </Head>
-
-      <main>
+      <div className="App pb-20 min-h-screen bg-custom-image bg-fixed bg-center bg-cover bg-no-repeat">
+        <Head>
+          <title>Schmietta&apos;s portfolio</title>
+          <meta
+            name="description"
+            content="Welcome to my personal portfolio website."
+          />
+          <link rel="icon" href="/iconFirst.ico" />
+        </Head>
         <Banner />
         <Projects />
         <Footer />
-      </main>
+      </div>
     </div>
   );
 }
