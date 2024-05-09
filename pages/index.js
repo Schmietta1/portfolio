@@ -6,7 +6,7 @@ import Projects from "../component/Projects";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-gray-500 min-h-screen">
       <Head>
         <title>Schmietta&apos;s portfolio</title>
         <meta

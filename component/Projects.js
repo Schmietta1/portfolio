@@ -1,29 +1,25 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-// Constants for animation variants to improve reusability and maintainability
-const ANIMATION_VARIANTS = {
-  initial: {
-    scale: 1,
-  },
-  hover: {
-    scale: 1.05,
-  },
+// Constants for animation variants
+const animationVariants = {
+  initial: { scale: 1 },
+  hover: { scale: 1.05 },
 };
 
 const ProjectCard = ({ name, description, linkToPdf }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
-  const handleToggle = (e) => {
-    e.stopPropagation();
-    setIsExpanded(!isExpanded);
+  // Toggle expanded state
+  const handleToggle = () => {
+    setIsExpanded((prev) => !prev);
   };
 
   return (
     <motion.div
       className="project-card bg-gray-800 p-6 rounded-lg shadow-2xl"
       onClick={handleToggle}
-      variants={ANIMATION_VARIANTS}
+      variants={animationVariants}
       initial="initial"
       whileHover="hover"
       layout
@@ -55,27 +51,17 @@ const ProjectCard = ({ name, description, linkToPdf }) => {
 
 const Projects = () => {
   const projects = [
-    {
-      name: "PING",
-      description:
-        "A team of 4 students. We were assigned to create an online IDE for HTML, CSS, and JS.",
-    },
+    { name: "PING", description: "Online IDE for HTML, CSS, and JS." },
     {
       name: "ERO1",
-      description:
-        "A project of 4 students. We were assigned to optimize the route of plowing snow in Montreal city using graphs and Python.",
+      description: "Optimize snow plowing routes in Montreal.",
       linkToPdf: "/pdfs/ERO1.pdf",
     },
     {
       name: "TIGER",
-      description:
-        'A project of 4 students. We were assigned to create a compiler for the programming language "Tiger".',
+      description: 'Create a compiler for "Tiger" programming language.',
     },
-    {
-      name: "42sh",
-      description:
-        "A project of 4 students. We were assigned to create a POSIX shell.",
-    },
+    { name: "42sh", description: "Create a POSIX shell. Written in C" },
   ];
 
   return (

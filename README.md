@@ -1,1 +1,1 @@
-Go to https://nextjs-blond-ten-26.vercel.app/
+Go to https://schmietta-portfolio.vercel.app/ to see my portfolio
