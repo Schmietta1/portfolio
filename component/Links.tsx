@@ -10,9 +10,11 @@ const LinkToPdf: FC<LinkToPdfProps> = ({
   linkText = "Download PDF",
 }) => {
   return (
-    <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
-      {linkText}
-    </a>
+    <div>
+      <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
+        {linkText}
+      </a>
+    </div>
   );
 };
 
