@@ -2,6 +2,7 @@
 import Head from "next/head";
 import Banner from "../component/Banner";
 import Footer from "../component/Footer";
+import LinkToPdf from "../component/Links.tsx";
 import Projects from "../component/Projects";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <link rel="icon" href="/iconFirst.ico" />
       </Head>
       <Banner />
+      <LinkToPdf pdfUrl="/pdfs/thomasCVFrancais.pdf" linkText="CV" />
       <Projects />
       <Footer />
     </div>
