@@ -59,6 +59,7 @@ const Projects = () => {
       <h1 className="text-4xl lg:text-6xl font-bold mb-4 text-white">
         My Projects:
       </h1>
+      <div></div>
       <div className="project-grid grid grid-cols-2 gap-4 px-16">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
