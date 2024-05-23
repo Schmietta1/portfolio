@@ -1,8 +1,24 @@
 // pages/test.js
+import React from "react";
+import AnimatedText from "../component/AnimatedText.tsx";
 export default function Test() {
   return (
-    <div className="bg-red-500 p-5 text-white">
-      If you see a red box, Tailwind is working!
+    <div>
+      <div className="h-screen flex justify-center items-center">
+        Scroll down to see the animation
+      </div>
+      <div className="h-screen flex justify-center items-center">
+        Scroll down to see the animation
+      </div>
+      <div className="h-screen flex justify-center items-center">
+        Scroll down to see the animation
+      </div>
+      <div className="h-screen flex justify-center items-center">
+        Scroll down to see the animation
+      </div>
+      <AnimatedText>
+        <div className="h-screen"></div>
+      </AnimatedText>
     </div>
   );
 }

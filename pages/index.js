@@ -6,12 +6,11 @@ import About from "../component/About";
 import Banner from "../component/Banner";
 import Contact from "../component/Contact";
 import Footer from "../component/Footer";
-import LinkToPdf from "../component/Links.tsx";
 import Projects from "../component/Projects";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-500">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-500 to-purple-500">
       <Head>
         <title>Schmietta&apos;s portfolio</title>
         <meta
@@ -21,20 +20,16 @@ export default function Home() {
         <link rel="icon" href="/iconFirst.ico" />
       </Head>
       <main className="flex-grow">
-        <div className="text-white text-center py-8 lg:py-16 mx-auto">
+        <div className="text-white text-center py-12 lg:py-20 mx-auto mb-[5%]">
           <Banner />
         </div>
-        <div className="text-white text-center py-6 lg:py-12 mx-auto">
+        <div className="text-white text-center py-10 lg:py-18 mx-auto mb-[5%]">
           <About />
         </div>
-        <div className="text-white text-center py-6 lg:py-12 mx-auto">
+        <div className="text-white text-center py-10 lg:py-18 mx-auto mb-[5%]">
           <Contact />
-          <div className="flex-none font-bold text-center text-white">
-            <LinkToPdf pdfUrl="/pdfs/thomasCVFrancais.pdf" linkText="CV(FR)" />
-            <LinkToPdf pdfUrl="/pdfs/thomasCVEnglish.pdf" linkText="CV(EN)" />
-          </div>
         </div>
-        <div className="text-white text-center py-6 lg:py-12">
+        <div className="text-white text-center py-10 lg:py-18 mb-[5%]">
           <Projects />
         </div>
       </main>

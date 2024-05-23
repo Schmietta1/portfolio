@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
+import AnimatedText from "./AnimatedText";
 
 // Constants for animation variants
 const animationVariants = {
@@ -56,15 +57,17 @@ const Projects = () => {
 
   return (
     <div className="projects relative">
-      <h1 className="text-4xl lg:text-6xl font-bold mb-4 text-white">
-        My Projects:
-      </h1>
-      <div></div>
-      <div className="project-grid grid grid-cols-2 gap-4 px-16">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
-        ))}
-      </div>
+      <AnimatedText>
+        <h1 className="text-4xl lg:text-6xl font-bold mb-[3%] text-white">
+          My Projects:
+        </h1>
+        <div></div>
+        <div className="project-grid grid grid-cols-2 gap-4 px-16">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
+        </div>
+      </AnimatedText>
     </div>
   );
 };

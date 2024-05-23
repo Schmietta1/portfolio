@@ -1,8 +1,10 @@
 import React from "react";
+import AnimatedText from "./AnimatedText";
 
 const About: React.FC = () => {
   return (
     <div>
+      <AnimatedText>
       <h1 className="text-4xl lg:text-6xl font-bold mb-4 text-white">
         About me:
       </h1>
@@ -10,6 +12,7 @@ const About: React.FC = () => {
         I'm a 22 years old student at EPITA, I love video games and I'm
         passionate about programming, science and quantum science.
       </p>
+      </AnimatedText>
     </div>
   );
 };

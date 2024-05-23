@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import AnimatedText from "./AnimatedText";
 
 interface LinkToPdfProps {
   pdfUrl: string;
@@ -11,9 +12,11 @@ const LinkToPdf: FC<LinkToPdfProps> = ({
 }) => {
   return (
     <div>
-      <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
-        {linkText}
-      </a>
+      <AnimatedText>
+        <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
+          {linkText}
+        </a>
+      </AnimatedText>
     </div>
   );
 };
