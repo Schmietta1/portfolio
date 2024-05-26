@@ -13,7 +13,7 @@ const PdfButton = ({ pdfUrl, linkText }) => {
       href={pdfUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="bg-gray-800 text-white p-4 rounded-lg shadow-2xl text-center font-bold"
+      className="bg-blue-600 text-white rounded-full px-4 py-2 hover:bg-blue-900"
       variants={animationVariants}
       initial="initial"
       whileHover="hover"

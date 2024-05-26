@@ -5,24 +5,24 @@ import AnimatedText from "./AnimatedText";
 // Constants for animation variants
 const animationVariants = {
   initial: { scale: 1 },
-  hover: { scale: 1.1 }, // Increase the scale value for a bigger effect
+  // hover: { scale: 1.1, transition: { duration: 0.3 } }, // Enhanced hover effect
 };
 
 const ProjectCard = ({ name, description, linkToPdf }) => {
   return (
     <motion.div
-      className="project-card bg-gray-800 p-6 rounded-lg shadow-2xl"
+      className="project-card bg-gradient-to-b from-blue-900 to-black p-6 rounded-xl shadow-2xl border border-gray-300 hover:shadow-none"
       variants={animationVariants}
       initial="initial"
       whileHover="hover"
       layout
     >
-      <h3 className="text-xl font-semibold text-white mb-2">{name}</h3>
+      <h3 className="text-2xl font-bold text-white mb-3">{name}</h3>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="text-white"
+        className="text-white text-opacity-90"
       >
         <p>{description}</p>
         {linkToPdf && (
@@ -30,9 +30,9 @@ const ProjectCard = ({ name, description, linkToPdf }) => {
             href={linkToPdf}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-300 hover:text-blue-500"
+            className="mt-2 inline-block text-sm font-medium bg-blue-600 text-white rounded-full px-4 py-2 hover:bg-blue-900"
           >
-            Report of the assignment
+            View Report
           </a>
         )}
       </motion.div>
@@ -58,11 +58,10 @@ const Projects = () => {
   return (
     <div className="projects relative">
       <AnimatedText>
-        <h1 className="text-4xl lg:text-6xl font-bold mb-[3%] text-white">
+        <h1 className="text-4xl lg:text-6xl font-bold mb-[2%] text-white">
           My Projects:
         </h1>
-        <div></div>
-        <div className="project-grid grid grid-cols-2 gap-4 px-16">
+        <div className="project-grid grid grid-cols-1 md:grid-cols-2 gap-8 px-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}

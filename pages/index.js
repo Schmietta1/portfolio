@@ -10,7 +10,7 @@ import Projects from "../component/Projects";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-500 to-purple-500">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-900 to-black">
       <Head>
         <title>Schmietta&apos;s portfolio</title>
         <meta
