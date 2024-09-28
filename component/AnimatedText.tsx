@@ -20,15 +20,15 @@ const AnimatedText: React.FC<{ children: React.ReactNode }> = ({
 
   const variants = {
     hidden: { opacity: 0, y: 50, scale: 0.8 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      scale: 1, 
-      transition: { 
-        duration: 1, 
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 1,
         ease: "easeOut",
         staggerChildren: 0.3,
-      } 
+      },
     },
   };
 
